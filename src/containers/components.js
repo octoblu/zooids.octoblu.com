@@ -1,5 +1,8 @@
 import find from 'lodash.find'
 import React, { PropTypes } from 'react'
+import Highlight from 'react-highlight'
+
+import 'highlight.js/styles/dark.css'
 
 import components from '../component-manifest'
 
@@ -34,9 +37,16 @@ export default class Components extends React.Component {
     if (!component) return null
 
     return (
-      <h1>
-        Component: {component.name}
-      </h1>
+      <div>
+        <h1>
+          Component: {component.name}
+        </h1>
+
+        <Highlight className="html">
+          {"<div> Hello </div>"}
+        </Highlight>
+
+      </div>
     )
   }
 }
