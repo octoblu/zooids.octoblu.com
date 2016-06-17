@@ -39,8 +39,13 @@ export default class Components extends React.Component {
     return (
       <div>
         <h1>
-          Component: {component.name}
+          {component.name}
         </h1>
+
+        <pre>npm install {component.package}</pre>
+        <a href={`https://github.com/octoblu/${component.package}`}>Github</a>
+
+        <h3>Sizes</h3>
 
         <Highlight className="html">
           {"<div> Hello </div>"}
