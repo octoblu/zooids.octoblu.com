@@ -12,7 +12,7 @@ export default (
   <Route>
     <Route path="/" component={App}>
       <IndexRoute component={GettingStarted} />
-      <Route path="components/:component-id" component={Components} />
+      <Route path="components/:componentId" component={Components} />
       <Route path="design" component={Design} />
       <Route path="getting-started" component={GettingStarted} />
       <Route path="generators" component={Generators} />
