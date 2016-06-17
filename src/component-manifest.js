@@ -18,6 +18,18 @@ export default [
     id: 'button',
     name: 'Button',
     package: 'zooid-button',
+    examples: [
+      {
+        title: 'Sizes',
+        description: 'Super fancy button description',
+        snippet: `
+        <Button kind="approve" size="large"> Click Me </Button>
+        <Button kind="approve" size="regular"> Click Me </Button>
+        <Button kind="approve" size="small"> Click Me </Button>
+        `,
+      },
+    ],
+
   },
   {
     id: 'card',

@@ -1,8 +1,9 @@
 import find from 'lodash.find'
+import map from 'lodash.map'
 import React, { PropTypes } from 'react'
 import Highlight from 'react-highlight'
-
-import 'highlight.js/styles/dark.css'
+import Button from 'zooid-button'
+import 'highlight.js/styles/github.css'
 
 import components from '../component-manifest'
 
@@ -45,12 +46,22 @@ export default class Components extends React.Component {
         <pre>npm install {component.package}</pre>
         <a href={`https://github.com/octoblu/${component.package}`}>Github</a>
 
-        <h3>Sizes</h3>
+        {
+          map(component.examples, (example) => {
+            return (
+              <div>
+                <h3>{example.title}</h3>
+                <p>{example.description}</p>
 
-        <Highlight className="html">
-          {"<div> Hello </div>"}
-        </Highlight>
+                {example.snippet}
 
+                <Highlight className="html">
+                  {example.snippet}
+                </Highlight>
+              </div>
+            )
+          })
+        }
       </div>
     )
   }
