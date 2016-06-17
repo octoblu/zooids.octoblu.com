@@ -17,10 +17,14 @@ export default class Components extends React.Component {
   }
 
   componentWillMount() {
-    const { componentId } = this.props.routeParams
-
     this.setState({
-      component: find(components, { id: componentId }),
+      component: find(components, { id: this.props.routeParams.componentId }),
+    })
+  }
+
+  componentWillReceiveProps({ routeParams }) {
+    this.setState({
+      component: find(components, { id: routeParams.componentId }),
     })
   }
 
