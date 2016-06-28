@@ -2,9 +2,9 @@
 React powered UI components. We call them Zooids! 
 
 ### Published
-- [ ] zooid-alert
-- [ ] zooid-button
-- [ ] zooid-input
-- [ ] zooid-toast
+- [x] zooid-alert
+- [x] zooid-button
+- [x] zooid-input
+- [x] zooid-toast
 
 ### WIP
